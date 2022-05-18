@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "microservice-template"
+version = "0.1.0"
+description = ""
+authors = ["ADO ADD OR <ado.add.or@intel.com>"]
+
+[[tool.poetry.source]]
+name = "pypi-org-remote"
+url = "https://ubit-artifactory-or.intel.com/artifactory/api/pypi/pypi-org-remote/simple"
+default = true
+
+[[tool.poetry.source]]
+name = "adoaddautomation-or-local"
+url = "https://ubit-artifactory-or.intel.com/artifactory/api/pypi/adoaddautomation-or-local/simple"
+secondary = true
+
+[tool.poetry.scripts]
+microservice-template = 'microservice_template.app:main'
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4.0"
+fastapi = "^0.73.0"
+uvicorn = "^0.17.0"
+python-multipart = "^0.0.5"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+flake8 = "^4.0.1"
+black = "^22.3.0"
+bandit = "^1.7.4"
+
+[tool.bandit.assert_used]
+skips = ["*/test_*.py"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,50 @@
+{
+  "HSD_123": {
+    "test_id": "HSD_123",
+    "description": "a description",
+    "test_domain": "wifi",
+    "software_dependencies": [
+      {
+        "type": "nuget",
+        "name": "winscp",
+        "version": "1.0.0",
+        "source_url": "source-url"
+      },
+      {
+        "type": "python",
+        "name": "rails",
+        "version": "0.196.130",
+        "source_url": "artifactory/py/platform-automation"
+      }
+    ],
+    "hardware_dependencies": [
+      {
+        "name": "onebox"
+      }
+    ]
+  },
+  "HSD_456": {
+    "test_id": "HSD_456",
+    "description": "a description",
+    "test_domain": "audio",
+    "software_dependencies": [
+      {
+        "type": "nuget",
+        "name": "winscp",
+        "version": "1.0.0",
+        "source_url": "source-url"
+      },
+      {
+        "type": "python",
+        "name": "rails",
+        "version": "0.196.130",
+        "source_url": "artifactory/py/platform-automation"
+      }
+    ],
+    "hardware_dependencies": [
+      {
+        "name": "soundblaster"
+      }
+    ]
+  }
+}
